@@ -1,6 +1,7 @@
 # CPG - Books
 
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/f7e10d0e67f3a34506fb/maintainability)](https://codeclimate.com/github/leomperes/cpg-books/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/f7e10d0e67f3a34506fb/test_coverage)](https://codeclimate.com/github/leomperes/cpg-books/test_coverage)
 
 ## Introduction
 
@@ -103,3 +104,4 @@ The following fields should be returned:
 
 Turn on a **protect_from_forgery** filter for html posts, but leave it off for json posts.
 
+[![Analytics](https://ga-beacon.appspot.com/UA-25165099-7/cpg-books/README.md?flat)](https://github.com/leomperes/cpg-books "CPG - Books")

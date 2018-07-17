@@ -144,3 +144,6 @@ fabric.properties
 .idea/markdown-navigator.xml
 .idea/markdown-navigator/
 .idea/markdown-exported-files.xml
+
+# Ignore application configuration
+/config/application.yml
