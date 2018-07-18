@@ -26,4 +26,7 @@ class Book < ApplicationRecord
 
   # Model concerns inclusions:
   include Authorable
+
+  # Model scopes:
+  scope :by_year, -> (year) { where("CAST(strftime('%Y', release_date) AS INT) = ?", year) }
 end

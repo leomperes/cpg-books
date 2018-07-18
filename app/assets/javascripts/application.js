@@ -11,8 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require activestorage
-//= require turbolinks
 //= require what-input
 //= require foundation.min
 //= require_self

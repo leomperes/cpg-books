@@ -1,18 +1,22 @@
 <div class="callout large primary">
   <div class="text-center">
-    <h1>Books</h1>
+    <h1>Report</h1>
   </div>
 </div>
 
 <article class="grid-container">
-    <div class="grid-x align-center text-center" id="content">
+    <div class="grid-x text-center" id="content">
 
-      <div class="cell medium-8">
+      <div class="cell">
         <p id="notice"><%= notice %></p>
 
         <% @books.each do |book| %>
-          <div class="blog-post"><h3><%= link_to book.title, book %></h3></div>
-          <hr />
+          <div class="blog-post">
+            <h3>
+              <%= link_to book.title, book %>&nbsp;
+              <small><%= book.release_date %></small>
+            </h3>
+          </div>
         <% end %>
       </div><!-- /.medium-8.cell -->
 

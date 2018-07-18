@@ -1,29 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="callout large primary">
+  <div class="text-center">
+    <h1>Books</h1>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @book.title %>
-</p>
+<article class="grid-container">
+    <div class="grid-x align-center" id="content">
 
-<p>
-  <strong>Authors:</strong>
-  <%= @book.authors_names.join(', ') %>
-</p>
+      <div class="medium-8 cell">
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Release date:</strong>
-  <%= @book.release_date %>
-</p>
+        <div class="blog-post">
+          <h3><%= @book.title %> <small>$<%= @book.base_price %></small></h3>
+          <p>
+            <strong>Release Date:</strong> <%= @book.release_date %><br />
+            <strong>Format:</strong> <%= @book.format %>
+          </p>
+          <div class="callout">
+            <ul class="menu simple">
+              <li><strong>Authors:</strong> <%= @book.authors_names.join(', ') %></li>
+            </ul>
+          </div>
+        </div>
 
-<p>
-  <strong>Base price:</strong>
-  <%= @book.base_price %>
-</p>
+        <%= link_to 'Edit', edit_book_path(@book), class: 'button primary' %>
+        <%= link_to 'Back', books_path, class: 'button secondary' %>
 
-<p>
-  <strong>Format:</strong>
-  <%= @book.format %>
-</p>
+      </div><!-- /.medium-8.cell -->
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+    </div><!-- /#content -->
+</article>
