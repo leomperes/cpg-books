@@ -30,7 +30,7 @@ module CpgBooks
     config.generators do |g|
       # See      :: http://stackoverflow.com/questions/8722195/how-can-i-completely-disable-coffeescript-in-a-rails-3-1-app
       # See more :: http://stackoverflow.com/questions/4630911/override-default-scaffold-generator-in-rails-3
-      # g.scaffold_controller = 'd1_scaffold_controller'
+      # g.scaffold_controller = 'cpg_scaffold_controller'
       g.javascript_engine :js
 
       # See :: https://stackoverflow.com/a/42503972/2334082
