@@ -6,5 +6,7 @@ class CreateAuthors < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
+
+    add_index :authors, [:first_name, :last_name], unique: true
   end
 end

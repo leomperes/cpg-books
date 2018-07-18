@@ -55,6 +55,10 @@ group :development do
   # Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # Annotates Rails/ActiveRecord Models, routes, fixtures, and others based on
+  # the database schema.
+  gem 'annotate', '~> 2.7', '>= 2.7.4'
 end
 
 group :test do
