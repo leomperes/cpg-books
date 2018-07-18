@@ -94,6 +94,7 @@ node_modules/
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
+.idea/dataSources.xml
 
 # Gradle
 .idea/**/gradle.xml
@@ -117,6 +118,7 @@ cmake-build-release/
 .idea/modules.xml
 .idea/typescript-compiler.xml
 .idea/vcs.xml
+.idea/vagrant.xml
 
 # IntelliJ
 out/
