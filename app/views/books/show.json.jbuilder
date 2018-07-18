@@ -1,5 +1,3 @@
-# json.partial! 'books/book', book: @book
-
 json.id @book.id
 json.title @book.title
 json.release_date @book.release_date.strftime('%m-%d-%Y')
