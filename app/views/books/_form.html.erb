@@ -17,6 +17,13 @@
   </div>
 
   <div class="field">
+    <%= form.label :authors %>
+    <%= form.collection_check_boxes :author_ids, Author.all, :id, :name do |author| %>
+      <%= author.label { author.check_box + author.text } %>
+    <% end %>
+  </div>
+
+  <div class="field">
     <%= form.label :release_date %>
     <%= form.date_select :release_date %>
   </div>
@@ -24,6 +31,11 @@
   <div class="field">
     <%= form.label :base_price %>
     <%= form.text_field :base_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :format %>
+    <%= form.select :format, Book.formats.keys, selected: book.format %>
   </div>
 
   <div class="actions">

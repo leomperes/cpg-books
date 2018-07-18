@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  models:
+    validations:
+      blank_if_date_2_months: "can't be blank if the release date is within 2 months"

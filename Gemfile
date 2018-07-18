@@ -59,6 +59,9 @@ group :development do
   # Annotates Rails/ActiveRecord Models, routes, fixtures, and others based on
   # the database schema.
   gem 'annotate', '~> 2.7', '>= 2.7.4'
+  # Needed to use RailsPanel Chrome plugin.
+  # https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg/related
+  gem 'meta_request', '~> 0.6.0'
 end
 
 group :test do
