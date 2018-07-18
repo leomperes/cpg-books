@@ -1,0 +1,99 @@
+# For a quick start check out our HTTP Requests collection
+# (RubyMine:Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file
+#   field (multipart/form-data).
+
+
+### BOOKS INDEX - BooksController#index
+
+GET {{host}}/books.json
+Accepts: application/json
+
+> {%
+client.test("List Books", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+
+client.test("Response content-type is JSON", function() {
+  var type = response.contentType.mimeType;
+  client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
+});
+%}
+
+### CREATE BOOK - BooksController#create
+# ID property will be disregard by permit-params.
+
+POST {{host}}/books.json
+Accept: application/json
+Content-Type: application/json
+
+{
+  "book": {
+    "id": "",
+    "title": "...",
+    "release_date": "2018-01-03",
+    "base_price": "15.88",
+    "author_ids": ["3","4"]
+  }
+}
+
+> {%
+client.test("Create new Book executed successfully", function() {
+  client.assert(response.status === 201, "Response status is not 201");
+});
+
+client.test("Response content-type is JSON", function() {
+  var type = response.contentType.mimeType;
+  client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
+});
+
+client.global.set("book_id", response.body.id);
+
+client.test("ID option exists", function() {
+  client.assert(response.body.hasOwnProperty("id"), "Cannot find 'id' option in response");
+});
+client.test("Title option exists", function() {
+  client.assert(response.body.hasOwnProperty("title"), "Cannot find 'title' option in response");
+});
+client.test("Release Date option exists", function() {
+  client.assert(response.body.hasOwnProperty("release_date"), "Cannot find 'release_date' option in response");
+});
+client.test("Base Price option exists", function() {
+  client.assert(response.body.hasOwnProperty("base_price"), "Cannot find 'base_price' option in response");
+});
+%}
+
+### BOOK DETAILS - BooksController#show
+
+GET {{host}}/books/{{book_id}}.json
+Accepts: application/json
+
+> {%
+client.test("Get Book details", function() {
+  client.assert(response.status === 200, "Response status is not 200");
+});
+
+client.test("Response content-type is JSON", function() {
+  var type = response.contentType.mimeType;
+  client.assert(type === "application/json", "Expected 'application/json' but received '" + type + "'");
+});
+
+client.test("ID option exists", function() {
+  client.assert(response.body.hasOwnProperty("id"), "Cannot find 'id' option in response");
+});
+client.test("Title option exists", function() {
+  client.assert(response.body.hasOwnProperty("title"), "Cannot find 'title' option in response");
+});
+client.test("Release Date option exists", function() {
+  client.assert(response.body.hasOwnProperty("release_date"), "Cannot find 'release_date' option in response");
+});
+client.test("Base Price option exists", function() {
+  client.assert(response.body.hasOwnProperty("base_price"), "Cannot find 'base_price' option in response");
+});
+%}
+
+###

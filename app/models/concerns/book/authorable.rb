@@ -5,7 +5,7 @@ class Book < ApplicationRecord
     module InstanceMethods
       # Get authors names (first and last names).
       def authors_names
-        authors.map(&:name)
+        authors.map(&:name).join(', ')
       end
     end
 

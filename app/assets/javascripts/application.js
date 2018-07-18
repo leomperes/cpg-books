@@ -15,4 +15,9 @@
 //= require foundation.min
 //= require_self
 
-$(document).foundation();
+$(document)
+  .foundation()
+  .ready(function() {
+    // Focus on the first visible field of the first form.
+    $('form:first input[type!="hidden"]:first').focus();
+  });
