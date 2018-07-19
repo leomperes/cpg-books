@@ -104,4 +104,11 @@ The following fields should be returned:
 
 Turn on a **protect_from_forgery** filter for html posts, but leave it off for json posts.
 
+
+# Results
+
+1.  For JSON calls, you can test running the HTTP requests in `./docs/api/books-api.http`.
+2.  Run `rails test` for code coverage and see the report `./coverage/index.html`.
+
+
 [![Analytics](https://ga-beacon.appspot.com/UA-25165099-7/cpg-books/README.md?flat)](https://github.com/leomperes/cpg-books "CPG - Books")
