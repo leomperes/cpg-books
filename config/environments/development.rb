@@ -58,4 +58,29 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  # # http://www.rubycoloredglasses.com/2012/04/generating-rspec-tests-for-existing-models-views-controllers/
+  # # Configure generators values. Many other options are available,
+  # # be sure to check the documentation.
+  # # http://edgeguides.rubyonrails.org/generators.html#customizing-your-workflow
+  # g.stylesheets false
+  # g.test_framework :rspec
+  # g.fallbacks[:rspec] = :test_unit
+  # g.fixture_replacement :factory_girl
+  #
+  # https://stackoverflow.com/a/46245081/2334082
+  config.generators do |g|
+    g.test_framework :rspec
+    g.fixture_replacement :factory_bot
+    g.factory_bot dir: 'spec/factories'
+    g.controller_specs true
+    g.request_specs true
+    g.helper_specs false
+    g.feature_specs true
+    g.mailer_specs true
+    g.model_specs true
+    g.observer_specs false
+    g.routing_specs true
+    g.view_specs true
+  end
 end

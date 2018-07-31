@@ -11,6 +11,8 @@
 #  updated_at   :datetime         not null
 #
 
+# title:string release_date:date base_price:decimal format:integer
+
 class Book < ApplicationRecord
   # Model associations:
   has_and_belongs_to_many :authors

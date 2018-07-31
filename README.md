@@ -108,7 +108,7 @@ Turn on a **protect_from_forgery** filter for html posts, but leave it off for j
 # Results
 
 1.  For JSON calls, you can test running the HTTP requests in `./docs/api/books-api.http`.
-2.  Run `rails test` for code coverage and see the report `./coverage/index.html`.
+2.  Run `rails test` for code coverage and see the report in `./coverage/index.html`.
 
 
 [![Analytics](https://ga-beacon.appspot.com/UA-25165099-7/cpg-books/README.md?flat)](https://github.com/leomperes/cpg-books "CPG - Books")
